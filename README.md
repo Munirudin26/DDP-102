@@ -1,2 +1,2 @@
-# Dok-resolusi
-Repository untuk menyimpan dokumen
+# DDP-UNSIA
+repository untuk mentimpan data kuliah
