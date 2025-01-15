@@ -1,2 +1,2 @@
 # DDP-UNSIA
-repository untuk mentimpan data kuliah
+dokumen kuliah
