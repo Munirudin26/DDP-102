@@ -1,134 +1,37 @@
-/*KELUARAN
+/*
+KELUARAN
     1.printf
     2.puts
     3.putchar
-    4.cout*/
-
-// 1.printf
-#include <iostream>  
-#include <cstdio> //untuk keluaran printf  
-#include <string> // menggunakan tipe data string
-//using namespace std; // hapus slash jika tidak mau ngetik ulang std:: ber ulang
-
-char tentukanKeterangan(int nilaiAkhir) {  
-    if (nilaiAkhir >= 70) return 'L';  
-    else return 'G';  
-}  
-
-int main() {  
-    std::string nim[] = {"12345NINING", "12354NENENG"};  
-    std::string nama[] = {"NINING", "NENENG"};  
-    int nilaiAkhir[] = {68, 65};  
-
-    for (int i = 0; i < 2; ++i) {  
-        std::printf("Data Ke - %d\n", i + 1);  
-        std::printf("NIM     - %s\n", nim[i].c_str()); // c_str() diperlukan agar printf dapat berfungsi  
-        std::printf("Nama    - %s\n", nama[i].c_str());  
-        std::printf("Nilai Akhir - %d\n", nilaiAkhir[i]);  
-        std::printf("Keterangan yang didapat - %c\n\n", tentukanKeterangan(nilaiAkhir[i]));  
-    }  
-
-    std::cin.get(); //ini ikut <iostream> supaya tidak otomatis selesai.
-    return 0;  
-}
-
-// 2.puts
-#include <iostream>  
-#include <string>  
-#include <cstring> // Optional, but good practice if using other C string functions  
-
-// Fungsi penentu nilai  
-char tentukanKeterangan(int nilaiAkhir) {  
-    if (nilaiAkhir >= 70) return 'L';  
-    else return 'G';  
-}  
-
-int main() {  
-    std::string nim[] = {"12345NINING", "12354NENENG"};  
-    std::string nama[] = {"NINING", "NENENG"};  
-    int nilaiAkhir[] = {68, 65};  
-
-    for (int i = 0; i < 2; ++i) {  
-        puts("Data Ke - ");  
-        puts((std::to_string(i + 1)).c_str()); // Convert int to string  
-        puts("NIM     - ");  
-        puts(nim[i].c_str());  
-        puts("Nama    - ");  
-        puts(nama[i].c_str());  
-        puts("Nilai Akhir - ");  
-        puts((std::to_string(nilaiAkhir[i])).c_str()); // Convert int to string  
-        puts("Keterangan yang didapat - ");  
-        puts(std::string(1, tentukanKeterangan(nilaiAkhir[i])).c_str()); // Convert char to string  
-    }  
-
-    std::cin.get();  
-    return 0;  
-}
-
-// 3.putschar
-#include <iostream>  
-#include <string>  
-#include <cstring>  
-
-char tentukanKeterangan(int nilaiAkhir) {  
-    if (nilaiAkhir >= 70) return 'L';  
-    else return 'G';  
-}  
-
-int main() {  
-    std::string nim[] = {"12345NINING", "12354NENENG"};  
-    std::string nama[] = {"NINING", "NENENG"};  
-    int nilaiAkhir[] = {68, 65};  
-
-    for (int i = 0; i < 2; ++i) {  
-        //Contoh penggunaan putchar untuk mencetak "Data Ke - " diikuti nomornya. Sangat tidak efisien!  
-        const char* text = "Data Ke - ";  
-        for (size_t k = 0; text[k] != '\0'; k++) putchar(text[k]);  
-        std::string numStr = std::to_string(i + 1);  
-        for (char c : numStr) putchar(c);  
-        putchar('\n');  
-
-
-        // ... (analog untuk NIM, Nama, Nilai Akhir, dan Keterangan.  Akan sangat panjang!) ...  
-
-        //Menghindari penggunaan putchar secara ekstensif karena tidak efisien  
-        puts("NIM     - ");  
-        puts(nim[i].c_str());  
-        puts("Nama    - ");  
-        puts(nama[i].c_str());  
-        puts("Nilai Akhir - ");  
-        puts(std::to_string(nilaiAkhir[i]).c_str());  
-        puts("Keterangan yang didapat - ");  
-        putchar(tentukanKeterangan(nilaiAkhir[i]));  
-        putchar('\n');  
-    }  
-
-    std::cin.get();  
-    return 0;  
-}
-
-// 4.cout
-#include <iostream>  
+    4.cout
+*/
+// 1.printf ------------------------------------------------------------------------------------------------------
+#include <stdio.h>  
 #include <string>  
 
-char tentukanKeterangan(int nilaiAkhir) {  
-    if (nilaiAkhir >= 70) return 'L';  
-    else return 'G';  
+// char ini adalah fungsi untuk mendefinisikan nilai
+char tentukanKeterangan(int nilai) {  
+    if (nilai >= 100) return 'A';  // jika nilai lebih dari 100 maka tampil A
+    if (nilai >= 80) return 'B';  
+    if (nilai >= 60) return 'C';  
+    return 'D'; // jika nilai di bawah 60 maka tamoil D
 }  
 
 int main() {  
-    std::string nim[] = {"12345NINING", "12354NENENG"};  
-    std::string nama[] = {"NINING", "NENENG"};  
-    int nilaiAkhir[] = {68, 65};  
+    std::string nim[] = {"230101010183", "2301010183"};  
+    std::string nama[] = {"MUHAMMAD MUNIRUDIN", "muhammad munirudin"};  
+    int nilaiAkhir[] = {68, 65}; // ini adalah Array yaitu nilai bilangan bulat  
 
     for (int i = 0; i < 2; ++i) {  
-        std::cout << "Data Ke - " << i + 1 << std::endl;  
-        std::cout << "NIM     - " << nim[i] << std::endl;  
-        std::cout << "Nama    - " << nama[i] << std::endl;  
-        std::cout << "Nilai Akhir - " << nilaiAkhir[i] << std::endl;  
-        std::cout << "Keterangan yang didapat - " << tentukanKeterangan(nilaiAkhir[i]) << std::endl << std::endl;  
+        printf("Data Ke - %d\n", i + 1);  
+        printf("NIM     = %s\n", nim[i].c_str());  
+        printf("Nama    = %s\n", nama[i].c_str());  
+        printf("Nilai Akhir = %d\n", nilaiAkhir[i]);  
+        printf("Keterangan yang didapat = %c\n\n", tentukanKeterangan(nilaiAkhir[i]));  
     }  
-
-    std::cin.get();  
+    getchar(); // supaya menunggu menekan tombol  
     return 0;  
 }
+// 2.puts --------------------------------------------------------------------------------------------------------
+// 3.putschar ----------------------------------------------------------------------------------------------------
+// 4.cout --------------------------------------------------------------------------------------------------------
