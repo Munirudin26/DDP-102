@@ -5,7 +5,7 @@ KELUARAN
     3.putchar
     4.cout
 */
-// 1.printf ------------------------------------------------------------------------------------------------------
+// A.1.printf ------------------------------------------------------------------------------------------------------
 #include <stdio.h>  
 #include <string>  
 
@@ -32,7 +32,70 @@ int main() {
     getchar(); // supaya menunggu menekan tombol  
     return 0;  
 }
-// 2.puts --------------------------------------------------------------------------------------------------------
+// A.1.cout --------------------------------------------------------------------------------------------------------
+#include <iostream>  
+#include <string>  
+
+char tentukanKeterangan(int nilai) {  
+    if (nilai >= 100) return 'A';  
+    if (nilai >= 80) return 'B';  
+    if (nilai >= 60) return 'C';  
+    return 'D';  
+}  
+
+int main() {  
+    std::string nim[] = {"230101010183", "2301010183"};  
+    std::string nama[] = {"MUHAMMAD MUNIRUDIN", "muhammad munirudin"};  
+    int nilaiAkhir[] = {68, 65};  
+
+    for (int i = 0; i < 2; ++i) {  
+        std::cout << "Data Ke - " << i + 1 << std::endl;  
+        std::cout << "NIM     = " << nim[i] << std::endl;  
+        std::cout << "Nama    = " << nama[i] << std::endl;  
+        std::cout << "Nilai Akhir = " << nilaiAkhir[i] << std::endl;  
+        std::cout << "Keterangan yang didapat = " << tentukanKeterangan(nilaiAkhir[i]) << std::endl << std::endl;  
+    }  
+    std::cin.get(); // Menunggu input dari user sebelum program berakhir.  
+    return 0;  
+}
+
+// TUGAS B.1.printf --------------------------------------------------------------------------------------------------------
+#include <iostream>  
+#include <string>  
+#include <limits>  
+#include <cstdio> // Untuk printf  
+
+int main() {  
+    std::string nim[2];  
+    std::string nama[2];  
+    int nilaiAkhir[2];  
+
+    for (int i = 0; i < 2; ++i) {  
+        printf("Masukan NIM = ");  
+        std::cin >> nim[i];  
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  
+
+        printf("Masukan Nama = ");  
+        std::getline(std::cin, nama[i]);  
+
+        printf("Masukan Nilai Akhir = ");  
+        std::cin >> nilaiAkhir[i];  
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  
+
+        printf("\n");  
+    }  
+
+    for (int i = 0; i < 2; ++i) {  
+        printf("Data Ke - %d\n", i + 1);  
+        printf("NIM     = %s\n", nim[i].c_str());  
+        printf("Nama    = %s\n", nama[i].c_str());  
+        printf("Nilai Akhir = %d\n\n", nilaiAkhir[i]);  
+    }  
+
+    getchar(); // Menunggu input dari user sebelum program berakhir.  
+    return 0;  
+}
+// A.2.puts --------------------------------------------------------------------------------------------------------
 #include <stdio.h>  
 #include <string>  
 
@@ -71,38 +134,43 @@ int main() {
     getchar();  
     return 0;  
 }
-// TUGAS 1.3.putschar ----------------------------------------------------------------------------------------------------
-// TUGAS 1.4.cout --------------------------------------------------------------------------------------------------------
+// TUGAS A.3.putschar ----------------------------------------------------------------------------------------------------
+// TUGAS B.4.cout --------------------------------------------------------------------------------------------------------
 #include <iostream>  
 #include <string>  
-
-using namespace std; // Ini opsional, tapi menyederhanakan penulisan cout  
-
-char tentukanKeterangan(int nilai) {  
-    if (nilai >= 100) return 'A';  
-    if (nilai >= 80) return 'B';  
-    if (nilai >= 60) return 'C';  
-    return 'D';  
-}  
+#include <limits>  
 
 int main() {  
-    string nim[] = {"230101010183", "2301010183"};  
-    string nama[] = {"MUHAMMAD MUNIRUDIN", "muhammad munirudin"};  
-    int nilaiAkhir[] = {68, 65};  
+    std::string nim[2];  
+    std::string nama[2];  
+    int nilaiAkhir[2];  
 
     for (int i = 0; i < 2; ++i) {  
-        cout << "Data Ke - " << i + 1 << endl;  
-        cout << "NIM     = " << nim[i] << endl;  
-        cout << "Nama    = " << nama[i] << endl;  
-        cout << "Nilai Akhir = " << nilaiAkhir[i] << endl;  
-        cout << "Keterangan yang didapat = " << tentukanKeterangan(nilaiAkhir[i]) << endl << endl;  
-    }  
-    // getchar() tidak diperlukan dalam C++ dengan cout  
-    /*Karena cout menampilkan output secara sinkron, tidak perlu menahan eksekusi dengan fungsi seperti getchar()*/
-    return 0;  
-}
+        std::cout << "Masukan NIM = ";  
+        std::cin >> nim[i];  
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  
 
-// TUGAS 2.4.cout-------------------------------------------------------------------------------
+        std::cout << "Masukan Nama = ";  
+        std::getline(std::cin, nama[i]);  
+
+        std::cout << "Masukan Nilai Akhir = ";  
+        std::cin >> nilaiAkhir[i];  
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  
+
+        std::cout << std::endl;  
+    }  
+
+    for (int i = 0; i < 2; ++i) {  
+        std::cout << "Data Ke - " << i + 1 << std::endl;  
+        std::cout << "NIM     = " << nim[i] << std::endl; //Perbaikan: NIM dan Nama ditampilkan di baris terpisah.  
+        std::cout << "Nama    = " << nama[i] << std::endl;  
+        std::cout << "Nilai Akhir = " << nilaiAkhir[i] << std::endl << std::endl;  
+    }  
+
+    std::cin.get(); // Menunggu input dari user sebelum program berakhir.
+    return 0;  
+}   
+// TUGAS B.4.cout-------------------------------------------------------------------------------
 #include <iostream>  
 #include <string>  
 #include <limits> // untuk membersihkan buffer input  
@@ -136,6 +204,6 @@ int main() {
         cout << "Nama    = " << nama[i] << endl;  
         cout << "Nilai Akhir = " << nilaiAkhir[i] << endl << endl;  
     }  
-
+    cin.get(); // Menunggu input dari user sebelum program berakhir.
     return 0;  
 }
