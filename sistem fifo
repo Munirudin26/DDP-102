@@ -1,0 +1,35 @@
+Berikut adalah contoh kode yang memungkinkan Anda untuk menampilkan jumlah dan FIFO TE yang diissued:
+
+```
+#include <iostream>
+#include <queue>
+#include <string>
+#include <map>
+
+using namespace std;
+
+struct Item {
+    string kode;
+    int jumlah;
+    string tanggal;
+};
+
+class SistemInventori {
+private:
+    map<string, queue<Item>> database;
+
+public:
+    // Fungsi untuk menambahkan item ke database
+    void tambahItem(string kode, int jumlah, string tanggal) {
+        Item item;
+        item.kode = kode;
+        item.jumlah = jumlah;
+        item.tanggal = tanggal;
+        database[kode].push(item);
+    }
+
+    // Fungsi untuk mengeluarkan item dari database berdasarkan FIFO
+    void keluarkanItem(string kode, int jumlah) {
+        if (database.find(kode) == database.end()) {
+            cout << "Kode " <<
+```
