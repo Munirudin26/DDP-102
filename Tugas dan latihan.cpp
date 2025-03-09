@@ -5,7 +5,7 @@
 - tugas keluaran printf
 - tugas keluaran cout
 
-// tugas A. dengan keluaran printf =============================================================================================================
+// tugas A. dengan keluaran printf ============================================================================================================
 #include <stdio.h> 
 #include <string> 
 
