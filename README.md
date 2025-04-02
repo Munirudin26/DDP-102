@@ -6,7 +6,8 @@
     menghapus paket                 : sudo apt remove nama_paket
     menghapus paket & file config   : sudo apt purge nama_paket
     melihat riwayat instalasi paket : grep " install " /var/log/apt/history.log
-    
+    cek partisi yang ada            : sudo fdisk -l /dev/sdX
+    umount USB Drive               : duso umount /dev/sdX1
 ------------------------------------------------------------
                          APLIKASI CMD
     G++ compiler
@@ -20,15 +21,16 @@
         membuka file    : nano file.cpp
         menyimpan file  : ctrl+o    enter    ctrl+x
         q               : quit
-    fdisk partisi
-        sudo apt update
-        sudo apt install dosfstools parted
-          /dev/sdX          X adalah disk yang kamu inginkan
-          p      : membuat partisi primer
-          l      : membuat partisi logis
-          d      : menghapus partisi dg masukan no partisinya
-          w      : menulis perubahan
-          q      : exit
+    dd USB bootable
+        -lsblk                      : identifikasi USB
+        Kemudian jalankan perintah berikut 
+        (gantilah /path/to/your.iso dan /dev/sdX dengan path ISO dan device USB yang sesuai)
+        if = input file (file ISO).
+        of = output file (disk USB).
+        bs = 4M = ukuran blok (4 MB), membantu mempercepat proses.
+        status=progress = menampilkan progres saat menyalin.
+        -sudo dd if=/path/to/your.iso of=/dev/sdX bs=4M status=progress 
+        -sync                      : safety removal
     parted partisi
           sudo apt update
           sudo apt install parted
