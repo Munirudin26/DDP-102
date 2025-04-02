@@ -19,7 +19,7 @@ struct buah{        // ini akan menjadi frame untuk data di bawah
     string warna;//string = untuk data teks
     float berat;//float = untuk data angka desimal
     int harga;//integer = untuk data angka bilangan bulat
-    boll lulus; // bollean = untuk data logika true false
+    bool lulus; // bollean = untuk data logika true false
     string rasa;
 };
 
