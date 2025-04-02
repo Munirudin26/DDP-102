@@ -30,8 +30,7 @@
     Internet Explorer 1995-Microsoft
     w3m 1995-Akinori Mita
         sudo apt install w3m w3m-img
-        w3m <URL>
-        w3m https://www.example.com
+        w3m https://www.howtogeek.com/103574/how-to-browse-from-the-linux-terminal-with-w3m/
     links 1999-Anton Laglashev
     Opera 2000-
     Mozila 2000-
