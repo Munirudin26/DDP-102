@@ -39,4 +39,4 @@
             \"    tanda kutip ganda
             \\    backslash
             \xaa  kode ASCII dalam hexadecimal (aa menunjukan angka ASCII ybs)
-    \aaa  kode ASCII dalam octal (aaa menunjukan angka ASCII ybs)
+            \aaa  kode ASCII dalam octal (aaa menunjukan angka ASCII ybs)
