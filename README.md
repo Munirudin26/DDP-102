@@ -22,6 +22,8 @@
 ------------------------------------------------------------
                          APLIKASI CMD
     G++ compiler
+        g++ file.cpp -o file
+        ./file
         g++ -o output file.cpp
         ./output
     
