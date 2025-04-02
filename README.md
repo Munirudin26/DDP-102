@@ -1,17 +1,3 @@
-    FORMAT PRINTF--------------------------------------------
-        integer                          %d
-        floating point
-            bentuk desimal               %f
-            bentuk berpangkat            %e
-            bentuk desimal & berpangkat  %g
-        double precission                %lf
-        character                        %c
-        string                           %s
-        unsigned integer                 %u
-        long integer                     %ld
-        long unsigned integer            %lu
-        unsigned hexadecimal integer     %x
-        unsigned octal integer           %o
     ESCAPE SQUANCES -----------------------------------------
         \b    backspace
         \f    pindah halaman
@@ -26,22 +12,32 @@
         \aaa  kode ASCII dalam octal 
               (aaa menunjukan angka ASCII ybs)
 ------------------------------------------------------------
-                    CHROMEBOOK USER
+                            LINUX
+    menginstal paket baru           : sudo apt install nama_paket
+    menginstal paket ulang          : sudo apt-get install nama_paket
+    menghapus paket                 : sudo apt remove nama_paket
+    menghapus paket & file config   : sudo apt purge nama_paket
+    melihat riwayat instalasi paket : grep " install " /var/log/apt/history.log
+    
+------------------------------------------------------------
+                         APLIKASI CMD
+    G++ compiler
+        g++ -o output file.cpp
+        ./output
+    
+    nano editor teks
+        membaca file    : cat file.cpp
+        membaca file    : less file.cpp    q=exit
+        membuka file    : nano file.cpp
+------------------------------------------------------------                        
+                          CHROMEBOOK
     MEMBUKA TERMINAL
         ctrl + alt + t
     MODE CROSH ----------------------------------------------
         shell
     MODE SHELL ----------------------------------------------
-    untuk menjalankan perintah Linux secara langsung di
-    ChromeOS
         help    : daftar perintah
         exit    : Keluar dari shell crosh
-    GCC-GNU Compiler Collection C/C++------------------------
-        gcc -o output file.cpp
-        ./output
-    INSTALL GCC C/C++----------------------------------------
-        sudo apt-get update 
-        sudo apt-get install build-essential 
     LYNX ----------------------------------------------------
     browser teks mendukung (HTTP,HTTPS,FTP,dll.)
     dikembangkan tahun 1992 oleh Lou Montulli
@@ -53,10 +49,6 @@
     dikembangkan tahun 2001 oleh Petr Baudis
         sudo apt-get update
         sudo apt-get install elinks
-    GIT -----------------------------------------------------
-    pengelola kode secara lokal atau remote dengan 
-        sudo apt-get update
-        sudo apt-get install git
     DOCKER --------------------------------------------------
     platform untuk membuat, menguji, dan mengelola aplikasi
         sudo apt-get update
