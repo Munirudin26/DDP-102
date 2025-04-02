@@ -1,6 +1,6 @@
 /*tambahkan fungsi ifstream jika ingin di terapkan 
 agar data yang di input bisa disimpan dalam txt*/
-include <iostream>
+#include <iostream>
 #include <vector>
 #include <string>
 
