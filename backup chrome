@@ -1,0 +1,2 @@
+BACKUP CHROME
+Jika Anda ingin mengaktifkan kembali rendering GPU-based, Anda dapat mengunjungi chrome://flags#crostini-gpu-support di browser Chrome Anda dan mengatur flag tersebut ke "Enabled", lalu restart perangkat Anda.
