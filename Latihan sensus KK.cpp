@@ -25,6 +25,7 @@ void simpanDataKeFile(std::vector<Penduduk> penduduk) {
     std::ofstream file("data_penduduk.txt", std::ios_base::app);
     if (file.is_open()) {
         for (int i = 0; i < penduduk.size(); i++) {
+            file << "data masarakat" << std::endl;
             file << "No.KK: " << penduduk[i].noKK << std::endl;
             for (std::string anggota : penduduk[i].anggota) {
                 file << "- " << anggota << std::endl;
