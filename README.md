@@ -20,6 +20,24 @@
         membuka file    : nano file.cpp
         menyimpan file  : ctrl+o    enter    ctrl+x
         q               : quit
+    fdisk partisi
+        sudo apt update
+        sudo apt install dosfstools parted
+          /dev/sdX          X adalah disk yang kamu inginkan
+          p      : membuat partisi primer
+          l      : membuat partisi logis
+          d      : menghapus partisi dg masukan no partisinya
+          w      : menulis perubahan
+          q      : exit
+    parted partisi
+          sudo apt update
+          sudo apt install parted
+          sudo parted /dev/sdX         : buka terminal
+          print                        : daftar partisi
+          mkpart primary ext4 1GB 2GB  : membuat partisi, 2gb 4gb adalah opsi
+          rm N                         : menghapus partisi, ganti N dg no partisi
+          resizepart N 100GB           : mengubah ukuran. ganti N dan 100GB opsi
+          quit                         : keluar
     ----------------------------------------- 
     world wide web 1991-Tim Berners-Lee
     Lynx 1992-Lou Montulli
