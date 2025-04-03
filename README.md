@@ -4,6 +4,7 @@
     menghapus paket                 : sudo apt remove nama_paket
     menghapus paket & file config   : sudo apt purge nama_paket
     melihat riwayat instalasi paket : grep " install " /var/log/apt/history.log
+    menampilkan informasi paket poco: apt-cache policy libpoco-dev
  
     ZIP --------------------------------------------------------------------------------------------------
     unzip -d /path/to/directory nama_file.zip  : menentukan direktori tempat file diekstrak
