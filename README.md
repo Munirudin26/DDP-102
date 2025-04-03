@@ -1,45 +1,46 @@
+                               CMD
+menginstal paket baru           : sudo apt install nama_paket
+menginstal paket ulang          : sudo apt-get install nama_paket
+menghapus paket                 : sudo apt remove nama_paket
+menghapus paket & file config   : sudo apt purge nama_paket
+melihat riwayat instalasi paket : grep " install " /var/log/apt/history.log
+ 
+                                          ZIP file
+unzip -d /path/to/directory nama_file.zip  : menentukan direktori tempat file diekstrak
+unzip -l file.zip                          : menampilkan isi file ZIP tanpa mengekstraknya
+unzip -o file.zip                          : menimpa file yang sudah ada tanpa konfirmasi
+unzip -q file.zip                          : mengekstrak file secara diam-diam tanpa menampilkan pesan
 
-------------------------------------------------------------
-                            LINUX
-    menginstal paket baru           : sudo apt install nama_paket
-    menginstal paket ulang          : sudo apt-get install nama_paket
-    menghapus paket                 : sudo apt remove nama_paket
-    menghapus paket & file config   : sudo apt purge nama_paket
-    melihat riwayat instalasi paket : grep " install " /var/log/apt/history.log
-    cek partisi yang ada            : sudo fdisk -l /dev/sdX
-    umount USB Drive               : duso umount /dev/sdX1
-------------------------------------------------------------
-                         APLIKASI CMD
-    G++ compiler
-        g++ file.cpp -o file
-        ./file
-        g++ -o output file.cpp
-        ./output
+                      G++ compiler
+g++ file.cpp -o file    :
+./file                  :
+g++ -o output file.cpp  :
+./output                :
     
-    nano editor teks
-        membaca file    : cat file.cpp
-        membuka file    : nano file.cpp
-        menyimpan file  : ctrl+o    enter    ctrl+x
-        q               : quit
-    dd USB bootable
-        -lsblk                      : identifikasi USB
-        Kemudian jalankan perintah berikut 
-        (gantilah /path/to/your.iso dan /dev/sdX dengan path ISO dan device USB yang sesuai)
-        if = input file (file ISO).
-        of = output file (disk USB).
-        bs = 4M = ukuran blok (4 MB), membantu mempercepat proses.
-        status=progress = menampilkan progres saat menyalin.
-        -sudo dd if=/path/to/your.iso of=/dev/sdX bs=4M status=progress 
-        -sync                      : safety removal
-    parted partisi
-          sudo apt update
-          sudo apt install parted
-          sudo parted /dev/sdX         : buka terminal
-          print                        : daftar partisi
-          mkpart primary ext4 1GB 2GB  : membuat partisi, 2gb 4gb adalah opsi
-          rm N                         : menghapus partisi, ganti N dg no partisi
-          resizepart N 100GB           : mengubah ukuran. ganti N dan 100GB opsi
-          quit                         : keluar
+              NANO teks editor
+membaca file    : cat file.cpp
+membuka file    : nano file.cpp
+menyimpan file  : ctrl+o    enter    ctrl+x
+q               : quit
+
+                      dd USB bootable
+lsblk                               : identifikasi USB
+sudo dd if=/path/to/your.iso of=/dev/sdX bs=4M status=progress
+sync                                : safety remof
+
+        if = input file (file ISO)
+        of = output file (disk USB)
+        bs = 4M = ukuran blok (4 MB)
+
+                  parted partisi
+  sudo apt update
+  sudo apt install parted
+  sudo parted /dev/sdX         : buka terminal
+  print                        : daftar partisi
+  mkpart primary ext4 1GB 2GB  : membuat partisi, 2gb 4gb adalah opsi
+  rm N                         : menghapus partisi, ganti N dg no partisi
+  resizepart N 100GB           : mengubah ukuran. ganti N dan 100GB opsi
+  quit                         : keluar
     ----------------------------------------- 
     world wide web 1991-Tim Berners-Lee
     Lynx 1992-Lou Montulli
