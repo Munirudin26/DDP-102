@@ -1,102 +1,64 @@
-    CMD -----------------------------------------------------------------------
-    menginstal paket baru           : sudo apt install nama_paket
-    menginstal paket ulang          : sudo apt-get install nama_paket
-    menghapus paket                 : sudo apt remove nama_paket
-    menghapus paket & file config   : sudo apt purge nama_paket
-    melihat riwayat instalasi paket : grep " install " /var/log/apt/history.log
-    menampilkan informasi paket poco: apt-cache policy libpoco-dev
+    ======================================================================================================================================
+    LINUX ---------------------------
+        instal paket baru           : sudo apt install namapaket
+        instal paket ulang          : sudo apt-get install namapaket
+        hapus paket                 : sudo apt remove namapaket
+        hapus configurasi           : sudo apt purge namapaket
+        tampilkan riwayat install   : grep " install " /var/log/apt/history.log
+        membaca riwayat instal      : less /var/log/apt/history.log
+        informasi kebijakan         : apt-cache namafile
+        tampilkan versi             : namafile --version
  
-    ZIP --------------------------------------------------------------------------------------------------
-    unzip -d /path/to/directory nama_file.zip  : menentukan direktori tempat file diekstrak
-    unzip -l file.zip                          : menampilkan isi file ZIP tanpa mengekstraknya
-    unzip -o file.zip                          : menimpa file yang sudah ada tanpa konfirmasi
-    unzip -q file.zip                          : mengekstrak file secara diam-diam tanpa menampilkan pesan
+    ZIP -------------------------------------------------
+        menentukan direktori tempat file diekstrak      : unzip -d /path/to/directory nama_file.zip
+        menampilkan isi file ZIP tanpa ekstrak          : unzip -l file.zip
+        menimpa file yang sudah ada tanpa konfirmasi    : unzip -o file.zip   
+        mengekstrak file tanpa menampilkan pesan        : unzip -q file.zip  
 
-    G++ compiler -------------------------------------------------
-    g++ file.cpp -o file    
-    ./file                  
-    g++ -o output file.cpp  
-    ./output                
+    G++ -------------------------
+        g++ file.cpp -o file    : A.1
+        ./file                  : A.2
+        -------------------------
+        g++ -o output file.cpp  : B.1
+        ./output                : B.2
     
-    NANO teks editor |_______________________________________________________
-    membaca file    : cat file.cpp                                           |
-    membuka file    : nano file.cpp                                          |
-    menyimpan file  : ctrl+o    enter    ctrl+x                              |
-    q_______________:_quit___________________________________________________|
-
-    dd USB bootable |________________________________________________________
-    lsblk                               : identifikasi USB                   |
-    sudo dd if=/path/to/your.iso of=/dev/sdX bs=4M status=progress           |
-    sync                                : safety remof                       |
-    |       if = input file (file ISO)                                       |
-    |       of = output file (disk USB)                                      |
-    |_______bs = 4M = ukuran blok (4 MB)_____________________________________|
+    NANO ------------------------
+        membaca file            : less file    (atau)    cat file
+        membuka file            : nano file                                        
+        menyimpan file          : ctrl+o    enter    ctrl+x                              
+        keluar                  : q
+   
+    BROWSER ==============================================================================================================================
+    1.world wide web      1991    Tim Berners-Lee                    
+    2.Lynx                1992    Lou Montulli
+    3.Mosaic              1993                                      
+    4.Netscape Navigator  1994                                     
+    5.Internet Explorer   1995    Microsoft                         
+    6.w3m                 1995    Akinori Mita
+    7.links               1999    Anton Laglashev
+    8.Opera               2000
+    9.Mozila              2000
+    10.ELinks             2002    Jesse Andrews
+    11.Firefox            2004 
+    12.Chrome             2008    google
+    13.f3k                2017    
+    14.Browsh             2017    Luis Fernando
+    15.vims               2017    Julius Schmidt
     
-    parted partisi |_________________________________________________________
-    sudo apt update                                                          |
-    sudo apt install parted                                                  |
-    sudo parted /dev/sdX         : buka terminal                             |
-    print                        : daftar partisi                            |
-    mkpart primary ext4 1GB 2GB  : membuat partisi, 2gb 4gb adalah opsi      |
-    rm N                         : menghapus partisi, ganti N dg no partisi  |
-    resizepart N 100GB           : mengubah ukuran. ganti N dan 100GB opsi   |
-    quit_________________________:_keluar____________________________________|
-    
-    world wide web 1991-Tim Berners-Lee ---------------------------------------------------
-    Lynx 1992-Lou Montulli ----------------------------------------------------------------
-        sudo apt-get update
-        sudo apt-get install lynx
-    Mosaic 1993----------------------------------------------------------------------------
-    Netscape Navigator 1994 ---------------------------------------------------------------
-    Internet Explorer 1995-Microsoft ------------------------------------------------------
-    w3m 1995-Akinori Mita -----------------------------------------------------------------
-        sudo apt install w3m w3m-img
-        w3m https://www.howtogeek.com/103574/how-to-browse-from-the-linux-terminal-with-w3m/
-    links 1999-Anton Laglashev ------------------------------------------------------------
-    Opera 2000- ---------------------------------------------------------------------------
-    Mozila 2000- --------------------------------------------------------------------------
-    ELinks 2002-Jesse Andrews -------------------------------------------------------------
-        sudo apt install elinks
-        elinks
-        Enter           : pilih
-        Esc             : menu browser
-        Ctrl+a          : add bookmark
-        /               : bilah pencarian
-        q               : quit
-    Firefox 2004 --------------------------------------------------------------------------
-    Chrome 2008-google---------------------------------------------------------------------
-    f3k 2017-open source ------------------------------------------------------------------
-    Browsh 2017-Luis Fernando -https://www.youtube.com/watch?v=zqAoBD62gvo&t=175s ---------
-    vims 2017-Julius Schmidt --------------------------------------------------------------
-    
-    Docker --------------------------------------------------------------------------------
-        sudo apt-get update
+    DOCKER ===============================================================================================================================
         sudo apt-get install docker.io
         sudo systemctl enable docker
-        docker run [OPTION] IMAGE [COMMAND]    : menjalankan kontainer
-        docker run hello-world                 : contoh up
-        docker ps                              : melihat kontainer yang berjalan
-        docker ps -a                           : melihat semua kontainer
-        docker stop CONTAINER_ID               : menghentikan kontainer
-        docker rm CONTAINER_ID                 : menghapus kontainer
-        docker pull IMAGE_NAME                 : mengunduh image
-        docker pull ubuntu                     : contoh up
-        docker images                          : melihat daftar image
-        docker rmi IMAGE_ID                    : menghapus image
-        docker exec -it CONTAINER_ID /bin/bash : masuk kedalam kontainer
-                        contoh penggunaan
-        misalkan ingin menjalankan aplikasi web sederhana menggunakan
-        Nginx, kamu dapat melakukan lngkah langkah ini.
-        docker pull nginx            : unduh image Nginx
-        docker run -d -p 80:80 nginx : jalankan kontainer nginx
-                   akses nginx melalui browser
-                         http://localhost --------------------------------------------------
+        -------------------------------------------------
+        docker run [OPTION] IMAGE [COMMAND]             : menjalankan kontainer
+        docker run hello-world                 
+        docker ps                                       : melihat kontainer yang berjalan
+        docker ps -a                                    : melihat semua kontainer
+        docker stop CONTAINER_ID                        : menghentikan kontainer
+        docker rm CONTAINER_ID                          : menghapus kontainer
+        docker pull IMAGE_NAME                          : mengunduh image
+        docker pull ubuntu                     
+        docker images                                   : melihat daftar image
+        docker rmi IMAGE_ID                             : menghapus image
+        docker exec -it CONTAINER_ID /bin/bash          : masuk kedalam kontainer
+                      
                        
-    CHROMEBOOK ----------------------------------------------
-    MEMBUKA TERMINAL
-        ctrl + alt + t
-    MODE CROSH ----------------------------------
-        shell
-    MODE SHELL ----------------------------------
-        help    : daftar perintah
-        exit    : Keluar dari shell crosh--------------------
