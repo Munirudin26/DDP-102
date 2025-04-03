@@ -1,3 +1,13 @@
+                    POCO framework web c++
+                project membuat web portofolio
+    MUNIRUDIN ================================================
+    instal POCO
+        sudo apt-get update
+        sudo apt-get insatall libpoco-dev
+        poco --version
+        
+
+
     PERINTAH ---------------------------------------------------
     menampilkan isi derektori
       ls -l /usr/local
@@ -10,9 +20,9 @@
     IDE
          -Visual Studio Code :sudo snap install vscode.
     Library dan Framework
-         -Boost: sudo apt-get install libboost-all-dev.
+         -Boost : @librari: sudo apt-get install libboost-all-dev.
          -Qt: sudo apt-get install qt5-default
-         -OpenCV: sudo apt-get install libopencv-dev
+         -OpenCV : librari citra dan visi komputer : sudo apt-get install libopencv-dev
          -Poco: sudo apt-get install libpoco-dev
     Alat Pengembangan
          -Git: sudo apt-get install git.
