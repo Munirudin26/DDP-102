@@ -26,12 +26,10 @@
     NANO ------------------------
         membaca file            : less file    (atau)    cat file
         membuka file            : nano file                                        
-        menyimpan file          : ctrl+o    enter    ctrl+x                              
+        menyimpan file          : ctrl+o    enter    ctrl+x                           
         keluar                  : q
         
-    VALGRID
-        sudo apt-get install valgrind
-        --------------------------------------------------
+    VALGRID ----------------------------------------------
         menjalankan Valgrind                             : valgrind --leak-check=full ./nama_program
         melakukan analisis kebocoran memori              : --leak-check=full
         menampilkan semua jenis kebocoran memori         : --show-leak-kinds=all
@@ -40,16 +38,16 @@
         lanjut melakukan debugging seperti biasa dg GDB
         Instalasi GDB
     
-    GDB
-        sudo apt-get install gdb
-        ------------------------------
+    GDB ------------------------------
         Menjalankan GDB              :gdb nama_program
         Menjalankan Program          :run
         Menetapkan Breakpoint        :break nama_fungsi
         Melanjutkan Eksekusi Program :continue
         Menampilkan Nilai Variabel   :print nama_variabel
         Keluar                       : quit
-    
+    libncurses5-dev ----------------------------------------
+    libncursesw5-dev ---------------------------------------
+
     MySQL
         sudo apt-get install mysql-server
         ------------------------------
