@@ -2,11 +2,13 @@
         instal paket baru           : sudo apt install namapaket
         instal paket ulang          : sudo apt-get install namapaket
         hapus paket                 : sudo apt remove namapaket
-        hapus configurasi           : sudo apt purge namapaket
+        hapus paket configurasi     : sudo apt purge namapaket
+        hapus paket dependensi      : sudo apt-get autoremove namapaket
         tampilkan riwayat install   : grep " install " /var/log/apt/history.log
         membaca riwayat instal      : less /var/log/apt/history.log
-        informasi kebijakan         : apt-cache namafile
-        tampilkan versi             : namafile --version
+        informasi kebijakan         : apt-cache namapaket
+        tampilkan versi             : namapaket --version
+        mencari direktori selueuh sistem  : sudo find / -name namapaket
  
     ZIP -------------------------------------------------
         menentukan direktori tempat file diekstrak      : unzip -d /path/to/directory nama_file.zip
