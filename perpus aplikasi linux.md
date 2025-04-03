@@ -1,11 +1,7 @@
-                    POCO framework web c++
+                        framework web c++
                 project membuat web portofolio
     MUNIRUDIN ================================================
-    instal POCO
-        sudo apt-get update
-        sudo apt-get insatall libpoco-dev
-        poco --version
-        
+    instal 
 
 
     PERINTAH ---------------------------------------------------
