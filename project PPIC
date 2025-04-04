@@ -1,0 +1,121 @@
+PPIC RM
+............................................................
+0. form peminjaman kunci gudang
+- no
+-tgl
+-jam pinjam
+-peminjam
+-satpam
+-jam dikembalikan
+-pengembali
+-satpam
+ 0. Form kartu stok
+- no
+- tgl
+- peminta
+- keterangan keperluan
+- no PO/PR
+- no RR/RR
+- recived
+- issued
+- balance atau total stok
+- petugas
+  1. formulir pinjam
+      - no
+      - tgl
+      - deskripsi
+      - peminjam
+      - petugas pinjam
+      - dikembalikan
+      - petugas penerima
+1. form peminjaman barang
+-no
+-tgl
+-no KS
+-deskripsi barang
+-jumlah
+-peminjam
+-petugas
+  2. form permintaan MTC
+      - no
+      - tgl
+      - jam
+      - code ks
+      - deskripsi
+      - jumlah permintaan
+      - sisa total stok
+      - peminta
+      - petugas permintaan
+      - keterangan keperluan
+ 3. form permintaan non MTC
+      - no
+      - tgl
+      - jam
+      - code ks
+      - deskripsi
+      - jumlah permintaan
+      - sisa total stok
+      - peminta
+      - petugas permintaan
+      - keterangan keperluan
+4. form permintaan by product
+      - no
+      - tgl
+      - jam
+      - code ks
+      - deskripsi
+      - jumlah permintaan
+      - peminta
+      - petugas permintaan
+      - code produksi
+5. form pengisian solar ext & mill
+-no
+- tgl
+- jenis kendaraan
+- nomor kendaraan
+- jumlah pengisian
+- MR
+- petugas pengisi
+6. form pengambilan barang order
+- no
+- tgl
+- deskripsi barang
+- jumlah
+- satuan
+- pengambil
+- deskripsi keperluan
+- no PR
+- petugas
+7. form pengeluaran barang non stok
+- no
+- tgl
+- deskripsi barang
+- jumlah
+- satuan
+- peminta
+- petugas
+8. form penerimaan barang paket
+- no
+- tgl
+- no PO
+- suplier
+- deakripsi barang
+- no RR
+- petugas
+9. form serah terima pekerjaan sift 1 ke 2
+- no
+- tgl
+- out standing job
+- ttd petugas
+9. form problem
+- no
+- tgl
+- problem
+- status problem
+- petugas
+
+
+
+PPIC PM
+............................................................
+1.
