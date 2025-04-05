@@ -1,4 +1,4 @@
-    LINUX --------------------------- ====================================================================================================
+    LINUX --------------------------- =================================================================================================
         instal paket baru           : sudo apt install namapaket
         instal paket ulang          : sudo apt-get install namapaket
         hapus paket                 : sudo apt remove namapaket
@@ -8,14 +8,34 @@
         membaca riwayat instal      : less /var/log/apt/history.log
         informasi kebijakan         : apt-cache namapaket
         tampilkan versi             : namapaket --version
-        mencari direktori selueuh sistem  : sudo find / -name namapaket
+        cari direktori all sistem   : sudo find / -name namapaket
+
+        daftar file                 : ls
+        daftar terperinci           : ls -l
+        direktori saat ini          : pwd
+        direktori baru              : mkdir nama_folder
+        direktori hapus kosong      : rmdir nama_folder
+        hapus file                  : rm nama_file.txt
+        hapus direktori             : rm -r nama_folder
+        salin file                  : cp nama_file.txt nama_file_baru.txt
+        ubah nama file              : mv nama_file.txt nama_file_baru.txt
+        file baru                   : touch new_file.txt
+        perbarui timestamp          : nama_file.txt
+        tampilkan isi file          : cat nama_file
+        tamoilkan file              : less nama_file
+        sisipkan file               : echo "masukan_teks" > nama_file.txt
  
     ZIP -------------------------------------------------
+        help                                            : zip --help
         menentukan direktori tempat file diekstrak      : unzip -d /path/to/directory nama_file.zip
-        menampilkan isi file ZIP tanpa ekstrak          : unzip -l file.zip
-        menimpa file yang sudah ada tanpa konfirmasi    : unzip -o file.zip   
+        menampilkan isi file ZIP tanpa ekstrak          : unzip -l file.zip   
         mengekstrak file tanpa menampilkan pesan        : unzip -q file.zip  
 
+    ncurses
+    libncurses5-dev------------------------- untuk menjalankan kode aplikasi game
+    libncursesw5-dev------------------------ untuk menjalankan kode aplikasi game
+        g++ namafile.cpp -o nama_file -lncurses
+        ./nama_file
     G++ -------------------------
         g++ file.cpp -o file    : A.1
         ./file                  : A.2
@@ -24,9 +44,8 @@
         ./output                : B.2
     
     NANO ------------------------
-        membaca file            : less file    (atau)    cat file
         membuka file            : nano file                                        
-        menyimpan file          : ctrl+o    enter    ctrl+x                           
+        menyimpan file          : ctrl+o    enter    ctrl+x                         
         keluar                  : q
         
     VALGRID ----------------------------------------------
@@ -36,8 +55,7 @@
         menampilkan detail informasi analisis            : --verbose
         menggunakan Valgrind dengan GDB lebih efektif    : valgrind --vgdb-error=1 ./nama_program
         lanjut melakukan debugging seperti biasa dg GDB
-        Instalasi GDB
-    
+        
     GDB ------------------------------
         Menjalankan GDB              :gdb nama_program
         Menjalankan Program          :run
@@ -45,8 +63,6 @@
         Melanjutkan Eksekusi Program :continue
         Menampilkan Nilai Variabel   :print nama_variabel
         Keluar                       : quit
-    libncurses5-dev ----------------------------------------
-    libncursesw5-dev ---------------------------------------
 
     MySQL
         sudo apt-get install mysql-server
@@ -71,7 +87,7 @@
         docker rmi IMAGE_ID                             : menghapus image
         docker exec -it CONTAINER_ID /bin/bash          : masuk kedalam kontainer
                       
-    BROWSER ----------------------========================================================================================================
+    BROWSER ----------------------======================================================================================================
         1.world wide web      1991    Tim Berners-Lee                    
         2.Lynx                1992    Lou Montulli
         3.Mosaic              1993                                      
